@@ -1,0 +1,42 @@
+@use './variables';
+
+.services{
+  padding-block: 10rem;
+  
+  .container{
+    .cards{
+      margin-top: 8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.6rem;
+      margin-inline: auto;
+      
+      .card{
+        flex: 1 1 350px;
+        text-align: left;
+        margin-bottom: 1.6rem;
+        background: variables.$dark-200;
+        padding: 1.8rem;
+        border: 1px solid variables.$grey-200;
+        border-bottom: 5px solid variables.$primary-100;
+
+        &-top{
+          margin-bottom: 2.4rem;
+        }
+        
+        &-body{
+          h3{
+            font-family: variables.$font-body;
+            font-weight: 500;
+            font-size: 3.2rem;
+            line-height: 150%;
+            color: variables.$grey-100;
+            margin-bottom: .8rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@use './variables';
+
+.about{
+  padding-block: 10rem;
+
+  .container{
+    .cards{
+      margin-top: 8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.6rem;
+      margin-inline: auto;
+      max-width: 100rem;
+      
+      .card{
+        flex: 1 1 180px;
+        text-align: center;
+        margin-bottom: 1.6rem;
+        padding: 1.8rem;
+
+        &-top{
+          background: variables.$dark-200;
+          border: 1px solid variables.$grey-200;
+          width: 6rem;
+          height: 6rem;
+          border-radius: 50%;
+          margin-inline: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 2.4rem;
+          overflow: hidden;
+
+          i{
+            font-size: 3.2rem;
+            color: variables.$primary-100;
+          }
+        }
+        
+        &-body{
+          h3{
+            font-family: variables.$font-body;
+            font-weight: 700;
+            font-size: 1.8rem;
+            line-height: 150%;
+            color: variables.$light-100;
+            margin-bottom: .8rem;
+          }
+
+          p, a{
+            font-family: variables.$font-body;
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 150%;
+            color: variables.$grey-100;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}
+

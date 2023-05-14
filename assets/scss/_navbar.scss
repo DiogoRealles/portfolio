@@ -1,0 +1,206 @@
+@use './variables' as *;
+
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  background: rgba(6, 9, 15, .4);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #202020;
+  position: fixed;
+  z-index: 990;
+  display: flex;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex: 1 1 auto;
+
+      .logo{
+        color: $light-100;
+        font-size: 2.4rem;
+        font-weight: 700;
+      }
+
+      &__menu {
+        list-style: none;
+        display: flex;
+        gap: 1.6rem;
+      }
+
+      &__link {
+        text-decoration: none;
+        color: #fff;
+        transition: all .3s ease-in-out;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: inline-block;
+        padding: .6rem;
+
+        &.active {
+          text-decoration: underline;
+          text-underline-offset: .8rem;
+          color: $primary-100;
+        }
+
+        &:is(:hover, :focus) {
+          text-decoration: underline;
+          text-underline-offset: .8rem;
+          color: $primary-100;
+        }
+      }
+    }
+
+    .bx {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      border-radius: 4px;
+      display: none;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 35%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        border-radius: 2px;
+        width: 70%;
+        height: 2px;
+        display: block;
+        transition: all .3s ease-in-out;
+        background-color: #fff;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 65%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        border-radius: 2px;
+        width: 70%;
+        height: 2px;
+        display: block;
+        transition: all .3s ease-in-out;
+        background-color: #fff;
+      }
+
+      &.activebx {
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(135deg);
+          border-radius: 2px;
+          width: 70%;
+          height: 2px;
+          display: block;
+          background-color: #fff;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-315deg);
+          border-radius: 2px;
+          width: 70%;
+          height: 2px;
+          display: block;
+          background-color: #fff;
+        }
+      }
+    }
+
+    .flex-start-row {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-direction: row;
+      flex: 1 1 auto;
+
+      .cta {
+        &-mobile {
+          display: none;
+        }
+
+        &-desktop {
+          display: block;
+        }
+      }
+    }
+
+
+    @media screen and (max-width: 768px) {
+      .nav__menu {
+        display: none;
+      }
+
+      .bx {
+        display: block;
+      }
+
+      .cta-mobile {
+        display: block;
+      }
+
+      .cta-desktop {
+        display: none;
+      }
+    }
+  }
+}
+
+.mobile {
+  width: 100%;
+  height: 100vh;
+  transition: all .3s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background-color: rgba(6, 9, 15, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 900;
+  margin-top: 80px;
+
+  &__item {
+    border-bottom: 1px solid #202020;
+  }
+
+  &__link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 24px 16px 24px 16px;
+    transition: all .3s ease-in-out;
+    color: $light-100;
+
+    &:hover {
+      background-color: rgba(15, 20, 31, 0.7);
+      padding: 24px 16px 24px 28px;
+      color: $primary-100;
+    }
+  }
+
+  &.showmenu {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all .3s ease-in-out;
+  }
+}

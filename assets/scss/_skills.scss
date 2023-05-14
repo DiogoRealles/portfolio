@@ -1,0 +1,69 @@
+@use './variables';
+
+.skills{
+  padding-block: 10rem;
+  
+  .container{
+    .middle{
+      width: 100%;
+      padding-top: 25rem;
+      padding-bottom: 10rem;
+      position: relative;
+
+      .seal{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+    
+        &__inner{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+        }
+      
+        &__image{
+          width: 17.9rem;
+          height: 17.9rem;
+          animation: rotate 12s infinite linear;
+        }
+      }
+    }
+
+    .cards{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.6rem;
+      margin-inline: auto;
+      
+      .card{
+        flex: 1 1 120px;
+        text-align: center;
+        margin-bottom: 1.6rem;
+        background: variables.$dark-200;
+        padding: 1.8rem;
+        border: 1px solid variables.$grey-200;
+
+        &-top{
+          width: 8rem;
+          height: 8rem;
+          margin-inline: auto;
+          
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}
