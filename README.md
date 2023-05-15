@@ -26,6 +26,7 @@
   - Acessibilidade
   - W3C validação
   - Lib AOS JS
+  - Motion Design
   - Animações suaves
   - Animações suaves com Scroll
   - Página com carregamento rápido
@@ -34,7 +35,7 @@
   - Page Style Guide
 
   # 📚 Aprendizados
-  Cirar animações suaves e intercaladas com cards (hero). <br />
+  Cirar animações suaves e intercaladas com cards (Motion Design). <br />
   Organizar as informações e elementos visuais de forma simples, intuitiva e agradável, baseando em estudos, mantendo a consistência de estilos.
   <br /><br />
   
